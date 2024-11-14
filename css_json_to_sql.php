@@ -21,6 +21,11 @@ if (is_array($input)) {
 
     if ($items) {
         foreach ($items as $item) {
+            if (!isset($item['status']) || strtolower($item['status']) !== 'Completed') {
+                echo "Skipping due to status not being 'Completed'\n";
+                continue;
+            }
+
             $columns = [];
             $values = [];
             $updateFields = [];

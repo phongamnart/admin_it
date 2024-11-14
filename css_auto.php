@@ -23,10 +23,15 @@ if (is_array($input)) {
     }
 
     $id = null;
+    $status = null;
 
     foreach ($input as $key => $value) {
         if ($key === 'ID') {
             $key = 'pj_id';
+        }
+
+        if ($key === 'status') {
+            $status = strtolower($value);
         }
 
         if (in_array($key, $validColumns)) {
@@ -43,6 +48,11 @@ if (is_array($input)) {
                 }
             }
         }
+    }
+
+    if ($status !== 'Completed') {
+        echo "Skipping due to status not being 'Completed'\n";
+        exit;
     }
 
     if (empty($id)) {
