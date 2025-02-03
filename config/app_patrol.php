@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
 define('DB_SERVER','localhost');
-define('DB_USER','root');
-define('DB_PASS' ,'');
-define('DB_NAME', 'italthai_customer_satisfaction_survey');
-define('URL_SERV', $_SERVER['HTTP_HOST']."/italthai_customer_satisfaction_survey/");
+define('DB_USER','italthai_patrol');
+define('DB_PASS' ,'aM5vUe341w');
+define('DB_NAME', 'italthai_patrol');
+define('URL_SERV', $_SERVER['HTTP_HOST']."/patrol/");
 class db_conn{
 	var $DB;
 	function __construct(){

@@ -20,18 +20,24 @@
                             <div class="d-flex justify-content-center">
                                 <button class="btn btn-primary btn-custom col-2" onclick="window.location.href='extodb.php'">Convert AD to Database</button>
                                 <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='data_sync.php'">DB Management: Data</button>
-                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='css_sync.php'">DB management: CSS</button>
-                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='css_contact.php'">DB management: CSS tb_contact</button>
+                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='patrol_sync.php'">DB Management: Patrol</button>
+                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='css_syne.php'">DB management: CSS</button>
+                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='css_rpc.php'">DB management: CSS RPC</button>
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button class="btn btn-primary btn-custom col-2" onclick="window.location.href='css_contact.php'">DB management: CSS tb_contact</button>
                                 <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='css_consult.php'">DB management: CSS tb_consult</button>
+                                <button class="btn btn-primary btn-custom col-2 ml-4" onclick="window.location.href='she_data_sync.php'">DB management: Get Daily Set จป.</button>
                             </div>
                         </div>
-                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card -->
+                    <!-- /.card-body -->
                 </div>
-                <!-- /.col -->
+                <!-- /.card -->
             </div>
-            <!-- /.row -->
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
         </div>
     </section>
 

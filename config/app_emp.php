@@ -1,18 +1,20 @@
 <?php
 date_default_timezone_set("Asia/Bangkok");
 define('DB_SERVER','localhost');
-define('DB_USER','root');
-define('DB_PASS' ,'');
-define('DB_NAME', 'italthai_customer_satisfaction_survey');
-define('URL_SERV', $_SERVER['HTTP_HOST']."/italthai_customer_satisfaction_survey/");
+// define('DB_USER','root');
+// define('DB_PASS' ,'');
+// define('DEFAULT_DB', 'patrol');
+// define('URL_SERV', $_SERVER['HTTP_HOST']."/patrol/");
 class db_conn{
 	var $DB;
-	function __construct(){
-		$conDB = mysqli_connect(DB_SERVER,DB_USER,DB_PASS) or die('localhost connection problem'.mysqli_error(mysqli_connect(DB_SERVER,DB_USER,DB_PASS)));
-		$this->DB = $conDB;
-		mysqli_select_db($conDB,DB_NAME);
-		mysqli_query($this->DB,"SET NAMES utf8");
-	}
+	public function __construct($dbname, $dbuser, $dbpass, $dbhost = DB_SERVER) {
+        $conDB = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+        if (!$conDB) {
+            die('Connection problem: ' . mysqli_connect_error());
+        }
+        $this->DB = $conDB;
+        mysqli_query($this->DB, "SET NAMES utf8");
+    }
 	public function sqlQuery($strSQL){
 		mysqli_query($this->DB,"SET NAMES utf8");
 		$objQuery = mysqli_query($this->DB, $strSQL);
